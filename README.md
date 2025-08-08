@@ -21,7 +21,8 @@ This integration provides:
 
 ##UI
 
-###Criteria Editor
+
+### Criteria Editor
 ![Criteria Editor UI](https://raw.githubusercontent.com/uniform-collab/mesh-min-score-personalization/main/public/Criteria%20Editor.png)
 
 ### Score Threshold Configuration
