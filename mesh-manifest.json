@@ -1,0 +1,22 @@
+{
+  "type": "custom-ssc-with-min-score",
+  "displayName": "custom-ssc-with-min-score",
+  "baseLocationUrl": "http://localhost:9000",
+  "locations": {
+    "canvas": {
+      "personalization": {
+        "selectionAlgorithms": {
+          "min-score-best-match": {
+            "displayName": "Min Score Best Match",
+            "description": "Selects the variant with the highest score for its dimension, only if that score exceeds the minScore.",
+            "criteriaEditorUrl": "/custom-ssc-min-score"
+          }
+        }
+      }
+    },
+
+    "settings": {
+      "url": "/"
+    }
+  }
+}

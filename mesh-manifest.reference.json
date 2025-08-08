@@ -1,0 +1,158 @@
+{
+  "type": "integration-reference",
+  "displayName": "Integration Reference",
+  "logoIconUrl": "https://uniform.app/uniform-logo-dev.png",
+  "badgeIconUrl": "https://uniform.app/uniform.png",
+  "category": "analytics",
+  "baseLocationUrl": "http://localhost:9000",
+  "scopes": ["user:read"],
+  "locations": {
+    "install": {
+      "description": [
+        "Describe your mesh integration",
+        "Each array element will create a new paragraph on the install dialog.",
+        "<html> is not allowed."
+      ],
+      "informationUrl": "https://yoursite.com/info-about-this-mesh-app"
+    },
+
+    "dataConnectors": [
+      {
+        "type": "<your-universally-unique-id>",
+        "badgeIconUrl": "https://uniform.app/uniform.png",
+        "displayName": "Integration Reference",
+        "supportsUnpublishedData": true,
+        "dataArchetypes": {
+          "default": {
+            "displayName": "Reference Archetype",
+            "dataEditorUrl": "/reference/dataResource",
+            "typeEditorUrl": "/reference/dataType",
+            "typeEditorLocations": {
+              "teDialog": {
+                "url": "../namedDialog"
+              }
+            },
+            "dataEditorUrlLocations": {
+              "deDialog": {
+                "url": "../namedDialog"
+              }
+            }
+          }
+        },
+        "dataSourceEditorUrl": "/reference/dataSource",
+        "dataSourceEditorLocations": {
+          "dceDialog": {
+            "url": "../namedDialog"
+          }
+        }
+      }
+    ],
+
+    "canvas": {
+      "parameterTypes": [
+        {
+          "type": "reference",
+          "editorUrl": "/reference/paramType",
+          "displayName": "Reference Parameter (Basic)",
+          "editorLocations": {
+            "ptEdit": {
+              "url": "../namedDialog"
+            },
+            "ptNested": {
+              "url": "../nestedNamedDialog"
+            }
+          },
+          "configureUrl": "/reference/paramTypeConfig",
+          "configurationLocations": {
+            "ptConfigure": {
+              "url": "../namedDialog"
+            }
+          },
+          "renderableInPropertyPanel": true
+        },
+        {
+          "type": "reference-tokens",
+          "editorUrl": "/reference/paramTypeSupportingDynamicTokens",
+          "displayName": "Reference Parameter (Dynamic Tokens)",
+          "renderableInPropertyPanel": true
+        },
+        {
+          "type": "reference-tokens-drawer",
+          "editorUrl": "/reference/paramTypeObjectValueEditDrawer",
+          "displayName": "Reference Parameter (Edit Drawer)",
+          "renderableInPropertyPanel": true
+        },
+        {
+          "type": "reference-placement",
+          "editorUrl": "/reference/paramTypePlacement",
+          "displayName": "Reference Parameter (Allowed Placement)",
+          "renderableInPropertyPanel": true,
+          "allowedPlacement": ["parameter", "field"]
+        }
+      ],
+      "personalization": {
+        "selectionAlgorithms": {
+          "reference-pz": {
+            "displayName": "Reference Integration Personalization",
+            "description": "Example integration-provided personalization algorithm UI for personalizing based on the day of the week",
+            "criteriaEditorUrl": "/reference/personalizationSelectionAlgorithm"
+          }
+        }
+      },
+      "editorTools": [
+        {
+          "id": "composition-editor-tool",
+          "name": "Composition Editor Tool",
+          "url": "/reference/canvas-editor-tools",
+          "iconUrl": "/uniform.png"
+        }
+      ]
+    },
+
+    "settings": {
+      "url": "/reference/settings",
+      "locations": {
+        "settingsDialog": {
+          "url": "../namedDialog"
+        }
+      }
+    },
+
+    "assetLibrary": {
+      "assetLibraryUrl": "/reference/assets/assetLibrary",
+      "assetParameterUrl": "/reference/assets/assetParameter",
+      "assetLibraryLocations": {
+        "dialog": {
+          "url": "../assetLibraryDialog"
+        }
+      }
+    },
+    "dashboardTools": [
+      {
+        "id": "dashboard-tool-1",
+        "name": "Dashboard Tool 1",
+        "url": "/reference/dashboardTool"
+      },
+      {
+        "id": "dashboard-tool-2",
+        "name": "Dashboard Tool 2",
+        "url": "/reference/dashboardTool",
+        "iconUrl": "/cat.svg"
+      }
+    ],
+    "projectTools": [
+      {
+        "id": "project-tool-1",
+        "name": "Project Tool 1",
+        "url": "/reference/projectTool",
+        "iconUrl": "https://uniform.app/uniform.png"
+      },
+      {
+        "id": "project-tool-2",
+        "name": "Project Tool 2",
+        "url": "/reference/projectTool",
+        "iconUrl": "/uniform.png"
+      }
+    ]
+  }
+}
