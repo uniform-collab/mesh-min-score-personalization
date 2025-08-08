@@ -19,6 +19,16 @@ This integration provides:
 3. **Your Application** implements a Context plugin that reads these criteria and applies the personalization logic
 4. **Visitors** see personalized content based on their dimension scores meeting the configured thresholds
 
+##UI
+
+###Criteria Editor
+![Criteria Editor UI](https://raw.githubusercontent.com/uniform-collab/mesh-min-score-personalization/main/public/Criteria%20Editor.png)
+
+### Score Threshold Configuration
+![Score Selector](https://raw.githubusercontent.com/uniform-collab/mesh-min-score-personalization/main/public/ScoreSelector.png)
+
+
+
 ## Installation & Setup
 
 ### Prerequisites
